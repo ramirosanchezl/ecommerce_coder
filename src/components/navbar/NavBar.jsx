@@ -4,25 +4,28 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import CartWidget from '../cartWidget/CartWidget';
+import Badge from '@mui/material/Badge';
 
 
-    export default function NavBar() {
+    const NavBar = () => {
         return (
           <Box sx={{ flexGrow: 1 }}>
             <AppBar style={{ background: '#2E3B55' }} position="static">
               
               <Toolbar>
               <Typography align="left" variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                  ELECTRONIC SHOP
-
-                  <Button color="error">Computadoras</Button>
-                  <Button color="error">Celulares</Button>
-                  <Button color="error">Tablets</Button>
-                </Typography>
-            <ShoppingCartIcon></ShoppingCartIcon>  
+                ELECTRONIC SHOP
+                <Button color="error">Computadoras</Button>
+                <Button color="error">Celulares</Button>
+                <Button color="error">Tablets</Button>
+              </Typography>
+              <Badge badgeContent={4} color="error">
+                <CartWidget/> 
+              </Badge>
               </Toolbar>
             </AppBar>
           </Box>
         );
-      }
+}
+export default NavBar
