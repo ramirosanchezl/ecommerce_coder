@@ -9,6 +9,8 @@ const ItemCount = ({stock, initial, onAdd}) =>{
     
     onAdd = () => { setCount(count + 1) }
     const onMinus = () => { setCount(count - 1) }
+    const onAddCart = () => { console.log("Cantidad agregada al carrito:" + {count}) }
+    
 
     return(
         <div className="card">
@@ -18,7 +20,7 @@ const ItemCount = ({stock, initial, onAdd}) =>{
               {count}
               <Button startIcon={<AddIcon/>} onClick={onAdd} disabled={count === stock ? "disabled" : ""}></Button>
             </div>
-            <button >Agregar al Carrito</button>
+            <button onClick={onAddCart}>Agregar al Carrito</button>
 
         </div>
     )
