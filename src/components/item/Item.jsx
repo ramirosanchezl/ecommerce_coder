@@ -9,7 +9,6 @@ const Item = ({item: { id, title, description, price, img }}) => {
                 <p>${price}</p>
                 <p>{description}</p>
             </div>
-            <button>Agregar</button>
         </div>
     )
 

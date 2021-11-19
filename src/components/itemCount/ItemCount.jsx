@@ -9,12 +9,11 @@ const ItemCount = ({stock, initial, onAdd}) =>{
     
     onAdd = () => { setCount(count + 1) }
     const onMinus = () => { setCount(count - 1) }
-    const onAddCart = () => { console.log("Cantidad agregada al carrito:" + {count}) }
+    const onAddCart = () => { console.log("Cantidad agregada al carrito:" + count) }
     
 
     return(
         <div className="card">
-            <h3>Item</h3>
             <div className="card-body">
               <Button startIcon={<RemoveIcon/>} onClick={onMinus} disabled={count === initial ? "disabled" : ""}></Button>
               {count}

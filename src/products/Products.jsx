@@ -23,6 +23,69 @@ const Products = [
         description:"El nuevo iPad se transforma en lo que quieras",
         price: 85000,
         img: img3
+    },
+    {
+        id: 4,
+        title:"Galaxy S21+",
+        description:"El Samsung Galaxy S21+ es la variante con pantalla grande de la serie Galaxy S21",
+        price: 150000,
+        img: img1
+    },
+    {
+        id: 5,
+        title:"Notebook ASUS X509JA",
+        description:"El ASUS X509 es un portátil que ofrece un rendimiento potente y una experiencia visual inmersiva",
+        price: 105000,
+        img: img2
+    },
+    {
+        id: 6,
+        title:"Ipad 10 128 GB",
+        description:"El nuevo iPad se transforma en lo que quieras",
+        price: 85000,
+        img: img3
+    },
+    {
+        id: 7,
+        title:"Galaxy S21+",
+        description:"El Samsung Galaxy S21+ es la variante con pantalla grande de la serie Galaxy S21",
+        price: 150000,
+        img: img1
+    },
+    {
+        id: 8,
+        title:"Notebook ASUS X509JA",
+        description:"El ASUS X509 es un portátil que ofrece un rendimiento potente y una experiencia visual inmersiva",
+        price: 105000,
+        img: img2
+    },
+    {
+        id: 9,
+        title:"Ipad 10 128 GB",
+        description:"El nuevo iPad se transforma en lo que quieras",
+        price: 85000,
+        img: img3
+    },
+    {
+        id: 10,
+        title:"Galaxy S21+",
+        description:"El Samsung Galaxy S21+ es la variante con pantalla grande de la serie Galaxy S21",
+        price: 150000,
+        img: img1
+    },
+    {
+        id: 11,
+        title:"Notebook ASUS X509JA",
+        description:"El ASUS X509 es un portátil que ofrece un rendimiento potente y una experiencia visual inmersiva",
+        price: 105000,
+        img: img2
+    },
+    {
+        id: 12,
+        title:"Ipad 10 128 GB",
+        description:"El nuevo iPad se transforma en lo que quieras",
+        price: 85000,
+        img: img3
     }
 ]
 
