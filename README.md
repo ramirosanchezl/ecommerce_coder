@@ -18,6 +18,6 @@ Abrir [http://localhost:3000](http://localhost:3000) en el navegador.
 ### `GIF`
 
 Funcionamiento de la App.
-
+![](https://github.com/ramirosanchezl/ecommerce_coder/blob/master/gif/Animation.gif)
 
 
