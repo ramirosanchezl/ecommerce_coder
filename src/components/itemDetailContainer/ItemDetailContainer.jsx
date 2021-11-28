@@ -11,7 +11,6 @@ const getItem = (productId) => {
 } 
 
 const ItemDetailContainer = () => {
-    const [loading, setLoading] = useState(false);
     const [item, setItem] = useState([]);
     const {productId} = useParams();
     
