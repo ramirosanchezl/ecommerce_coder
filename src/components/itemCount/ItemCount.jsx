@@ -15,6 +15,7 @@ const ItemCount = ({stock, initial, onAdd}) =>{
     return(
         <div className="card">
             <div className="card-body">
+            <h5>Cantidad:</h5>
               <Button startIcon={<RemoveIcon/>} onClick={onMinus} disabled={count === initial ? "disabled" : ""}></Button>
               {count}
               <Button startIcon={<AddIcon/>} onClick={onAdd} disabled={count === stock ? "disabled" : ""}></Button>

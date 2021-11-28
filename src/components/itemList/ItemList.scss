@@ -1,0 +1,10 @@
+.product-list{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 30px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    z-index: 2;
+    padding: 25px 0;
+}

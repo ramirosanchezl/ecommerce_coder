@@ -1,15 +1,15 @@
 import './App.css';
 import NavBar from './components/navbar/NavBar.jsx';
-//import ItemListContainer from './components/itemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer';
+import Main from './components/main/Main'
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar></NavBar>
-      <ItemDetailContainer/>
-      {/*<ItemListContainer title="Bienvenido" />*/}
-    </div>
+  <BrowserRouter>
+      <NavBar/>
+      <Main/>
+  </BrowserRouter>
+        
   );
 }
 

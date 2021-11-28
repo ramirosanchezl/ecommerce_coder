@@ -1,30 +1,32 @@
 import React, {useState, useEffect} from 'react';
-//import ItemCount from "../itemCount/ItemCount"
-import Products from '../../products/Products';
 import ItemList from '../itemList/ItemList';
+import Products from "../../products/Products";
+import { useParams } from 'react-router-dom';
 
-const productList = new Promise (
-    (result, reject) => setTimeout(() => result(Products), 2000)
-
-);
-
-
-const ItemListContainer = ({ title }) => {
+const ItemListContainer = () => {
 
     const [list, setList] = useState([]);
+    const {categoryName} = useParams();
+
+    function filtroCategoria(item) {
+        return item.category === categoryName
+    }
 
     useEffect(() => {
-        productList.then(result => setList(result))
-    }, [])
-
-
-    return (
-        <div>
-            <h1 className="text-center mt-2">{title}</h1>
-
-            {/*<ItemCount stock={5} initial={1}/>*/}
+        setTimeout(() =>{
+            let itemsPorCategoria = Products.filter(filtroCategoria);
+            setList(categoryName ? itemsPorCategoria : Products);
+        },2000)
+    },)
+    
+    
+    return(
+        <section>
             <ItemList list={list} />
-        </div>
+        </section>
+        
     )
 }
-export default ItemListContainer
+
+
+export default ItemListContainer;
