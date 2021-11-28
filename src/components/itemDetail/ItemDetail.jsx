@@ -5,7 +5,7 @@ import './ItemDetail.scss'
 
 const ItemDetail = ({item: { id, name, description, img, price }}) => {
     const totalStock = 5
-    const initial = 1
+    const initial = 0
     const [stock, setStock] = useState(totalStock)
     const [count, setCount] = useState(initial)
     const [add, setAdd] = useState(false)
@@ -41,8 +41,8 @@ const ItemDetail = ({item: { id, name, description, img, price }}) => {
                 <h3>{name}</h3>
                 <p className="card-description">{description}</p>
                 <p className="card-price">${price}</p>
-                <p>Unidades Disponibles: {stock}</p>
-                {add ? <Link to= {'/cart'}><button className="btn-finalizar">Comprar Ahora</button></Link> :
+                <p>Stock disponible: {stock}</p>
+                {add ? <Link to= {'/cart'}><button className="btn-finalizar">Ir al carrito</button></Link> :
                     <ItemCount stock={totalStock}
                     initial={initial}
                     count={count}

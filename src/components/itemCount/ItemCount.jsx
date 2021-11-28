@@ -4,23 +4,17 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import Button from '@material-ui/core/Button';
 
 
-const ItemCount = ({stock, initial, onAdd}) =>{
-    const [count, setCount] = React.useState(initial);
+const ItemCount = ({stock, initial, onAdd, count, increase, decrease}) =>{
     
-    onAdd = () => { setCount(count + 1) }
-    const onMinus = () => { setCount(count - 1) }
-    const onAddCart = () => { console.log("Cantidad agregada al carrito:" + count) }
-    
-
     return(
         <div className="card">
             <div className="card-body">
             <h5>Cantidad:</h5>
-              <Button startIcon={<RemoveIcon/>} onClick={onMinus} disabled={count === initial ? "disabled" : ""}></Button>
+              <Button startIcon={<RemoveIcon/>} onClick={decrease} disabled={count === initial}></Button>
               {count}
-              <Button startIcon={<AddIcon/>} onClick={onAdd} disabled={count === stock ? "disabled" : ""}></Button>
+              <Button startIcon={<AddIcon/>} onClick={increase} disabled={count === stock}></Button>
             </div>
-            <button onClick={onAddCart}>Agregar al Carrito</button>
+            <button onClick={onAdd}>Agregar al Carrito</button>
 
         </div>
     )
