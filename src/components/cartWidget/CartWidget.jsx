@@ -1,9 +1,11 @@
 import React from 'react';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import './cartWidget.scss'
+
 
 const CartWidget = () => {
     return (
-        <div className="cart rounded-lg d-flex align-items-center">
+        <div className="cartWidget">
             <ShoppingCartIcon style={{ color: 'white' }}/>
         </div>
     )

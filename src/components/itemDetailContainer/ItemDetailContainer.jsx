@@ -7,7 +7,7 @@ const getItem = (productId) => {
     return new Promise(result =>  setTimeout(() => 
         { result(Products.find(product =>
             product.id===parseInt(productId)))  
-        },500)) 
+        },1000)) 
 } 
 
 const ItemDetailContainer = () => {

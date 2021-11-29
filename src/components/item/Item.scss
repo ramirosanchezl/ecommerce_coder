@@ -1,8 +1,9 @@
 .card-product {
     box-shadow: 0 4px 8px 0 rgba(11, 29, 81, 1);
-    max-width: 300px;
+    max-width: 250px;
+    max-height: 450px;
     margin: auto;
-    display: block;
+    display: inline-block;
     text-align: center;
     img{
         width: 100%;
@@ -34,3 +35,7 @@
           }
       }
   }
+  .product-details {
+    color: #000000;
+    font-weight: bold;
+}

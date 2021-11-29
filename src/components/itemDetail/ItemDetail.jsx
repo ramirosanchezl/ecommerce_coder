@@ -2,13 +2,17 @@ import React, {useState} from 'react'
 import ItemCount from "../itemCount/ItemCount"
 import {Link} from 'react-router-dom'
 import './ItemDetail.scss'
+import CartContext from '../../context/CartContext'
 
-const ItemDetail = ({item: { id, name, description, img, price }}) => {
+const ItemDetail = ({item}) => {
     const totalStock = 5
     const initial = 0
     const [stock, setStock] = useState(totalStock)
     const [count, setCount] = useState(initial)
     const [add, setAdd] = useState(false)
+    const [quantity, setQuantity] = useState(0)
+    const { addItem } = CartContext()
+
 
     const increase = () => { 
         if(count < totalStock){
@@ -27,7 +31,13 @@ const ItemDetail = ({item: { id, name, description, img, price }}) => {
     const onAdd = () =>{
         if (count <= totalStock){
             setAdd(true)
+            setQuantity(count)
         }
+    }
+
+    const addToCart = () => {
+        addItem(item, quantity)
+        console.log(quantity)
     }
 
 
@@ -35,14 +45,14 @@ const ItemDetail = ({item: { id, name, description, img, price }}) => {
         
         <div className="card-product-detail">
             <div className="img-detail">
-                <img src={img} alt={id} width="350" />
+            <img src={item.img} alt={item.id} width="350" />
             </div>
             <div className="info-detail">
-                <h3>{name}</h3>
-                <p className="card-description">{description}</p>
-                <p className="card-price">${price}</p>
+                <h3>{item.name}</h3>
+                <p className="card-description">{item.description}</p>
+                <p className="card-price">${item.price}</p>
                 <p>Stock disponible: {stock}</p>
-                {add ? <Link to= {'/cart'}><button className="btn-finalizar">Ir al carrito</button></Link> :
+                {add ? <Link to= {'/cart'}><button className="btn-finalizar" onClick={addToCart}>Ir al carrito</button></Link> :
                     <ItemCount stock={totalStock}
                     initial={initial}
                     count={count}

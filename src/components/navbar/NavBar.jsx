@@ -24,8 +24,8 @@ const NavBar = () => {
                     {links.map((link, i) => {
                     return (<li  key={i}><Link className="nav-link" to={link.url}>{link.name}</Link></li>)
                     })}
-                    <Link to='/cart'><CartWidget/></Link>
                 </ul>
+                <Link to='/cart'><CartWidget/></Link>
             </nav>
       </header>
       
