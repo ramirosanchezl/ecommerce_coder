@@ -22,7 +22,7 @@ const ItemDetail = ({item}) => {
     }
 
     const decrease = () => { 
-        if(count > initial && count > 1){
+        if(count > initial && count > 0){
             setCount(count - 1)
             setStock(stock + 1)
         }
@@ -37,7 +37,6 @@ const ItemDetail = ({item}) => {
 
     const addToCart = () => {
         addItem(item, quantity)
-        console.log(quantity)
     }
 
 

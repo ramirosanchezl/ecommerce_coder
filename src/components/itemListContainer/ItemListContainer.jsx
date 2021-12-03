@@ -13,10 +13,8 @@ const ItemListContainer = () => {
     }
 
     useEffect(() => {
-        setTimeout(() =>{
             let itemsPorCategoria = Products.filter(filtroCategoria);
             setList(categoryName ? itemsPorCategoria : Products);
-        },2000)
     },)
     
     

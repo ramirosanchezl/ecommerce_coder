@@ -4,10 +4,10 @@ import Products from '../../products/Products';
 import ItemDetail from '../itemDetail/ItemDetail' ;
 
 const getItem = (productId) => {
-    return new Promise(result =>  setTimeout(() => 
+    return new Promise(result => 
         { result(Products.find(product =>
             product.id===parseInt(productId)))  
-        },1000)) 
+        },1000) 
 } 
 
 const ItemDetailContainer = () => {
