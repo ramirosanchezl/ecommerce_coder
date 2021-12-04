@@ -3,6 +3,7 @@ import Item from "../item/Item";
 import './ItemList.scss'
 
 const ItemList =({list}) => {
+    console.log("list:", list)
     return(
         <section className="product-list">
             {list.map(product => 
