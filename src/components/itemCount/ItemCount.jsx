@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 
 
 const ItemCount = ({stock, initial, onAdd, count, increase, decrease}) =>{
+    console.log("stock count: ",stock)
     
     return(
         <div className="card">
@@ -14,7 +15,7 @@ const ItemCount = ({stock, initial, onAdd, count, increase, decrease}) =>{
               {count}
               <Button startIcon={<AddIcon/>} onClick={increase} disabled={count === stock}></Button>
             </div>
-            <button onClick={onAdd} disabled={!count>=1}>Agregar al Carrito</button>
+            <button onClick={onAdd} disabled={!count>0}>Agregar al Carrito</button>
 
         </div>
     )

@@ -22,7 +22,6 @@ const ItemListContainer = () => {
         if(categoryName !== undefined){
             q = query(
                 itemsCollectionRef,
-                // where("category", "==", "transport"),
                 where("category", "==", categoryName)
         );
         }else{

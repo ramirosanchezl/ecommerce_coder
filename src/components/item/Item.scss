@@ -1,14 +1,16 @@
 .card-product {
     box-shadow: 0 4px 8px 0 rgba(11, 29, 81, 1);
-    max-width: 250px;
-    max-height: 450px;
+    width: 250px;
+    height: 450px;
     margin: auto;
-    display: inline-block;
+    display: grid;
     text-align: center;
+    align-items: center; 
     img{
-        width: 85%;
+        width: 80%;
         height: 10vw;
-        object-fit: scale-down; 
+        object-fit: scale-down;
+        align-items: center;
     }
     h3{
         color: #0B1D51;

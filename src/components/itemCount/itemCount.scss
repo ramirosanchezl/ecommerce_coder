@@ -1,0 +1,30 @@
+.card-count {
+    max-width: 300px;
+    border-radius: 5px;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #0B1D51;
+    h5{
+      text-align: justify;
+      padding: 10px 0px ;
+    }
+    p{
+      padding: 5px 0px;
+    }
+    .grid {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .column {
+        display: inline-block;
+        vertical-align: top;
+        font-size: medium;
+        text-align: left;
+            
+      }
+    }
+    
+  }
+  

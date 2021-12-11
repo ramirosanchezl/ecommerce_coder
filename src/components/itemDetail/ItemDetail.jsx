@@ -5,31 +5,32 @@ import './ItemDetail.scss'
 import CartContext from '../../context/CartContext'
 
 const ItemDetail = ({item}) => {
-    const totalStock = 5
+    const totalStock = item.stock
     const initial = 0
-    const [stock, setStock] = useState(totalStock)
+    let stock = totalStock
     const [count, setCount] = useState(initial)
     const [add, setAdd] = useState(false)
     const [quantity, setQuantity] = useState(0)
     const { addItem } = CartContext()
 
+    console.log("item detail: ",item)
+    console.log("stock detail: ",stock)
+
 
     const increase = () => { 
-        if(count < totalStock){
+        if(count < stock){
             setCount(count + 1)
-            setStock(stock - 1)
         }
     }
 
     const decrease = () => { 
-        if(count > initial && count > 0){
+        if(count > initial){
             setCount(count - 1)
-            setStock(stock + 1)
         }
     }
 
     const onAdd = () =>{
-        if (count <= totalStock){
+        if (count <= stock){
             setAdd(true)
             setQuantity(count)
         }
@@ -41,7 +42,6 @@ const ItemDetail = ({item}) => {
 
 
     return (
-        
         <div className="card-product-detail">
             <div className="img-detail">
             <img src={item.img} alt={item.id} width="350" />
@@ -52,7 +52,7 @@ const ItemDetail = ({item}) => {
                 <p className="card-price">${item.price}</p>
                 <p>Stock disponible: {stock}</p>
                 {add ? <Link to= {'/cart'}><button className="btn-finalizar" onClick={addToCart}>Ir al carrito</button></Link> :
-                    <ItemCount stock={totalStock}
+                    <ItemCount stock={stock}
                     initial={initial}
                     count={count}
                     increase={increase}
