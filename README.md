@@ -1,12 +1,12 @@
 # Ecommerce CoderHouse ReactJS
 
-El proyecto se encuentra en desarollo como proyecto para el curso de ReactJS.
+El proyecto se encuentra en desarollo como proyecto final para el curso de ReactJS.
 
 ## Comandos utiles
 
 Para poder visualizar el proyecto en funcionamiento:
 
-### `npm start`
+### `npm install`
 
 Instala las dependencias necesarias.
 
@@ -18,6 +18,6 @@ Abrir [http://localhost:3000](http://localhost:3000) en el navegador.
 ### `GIF`
 
 Funcionamiento de la App.
-![](https://github.com/ramirosanchezl/ecommerce_coder/blob/master/gif/Animation.gif)
+![](https://github.com/ramirosanchezl/ecommerce_coder/blob/master/gif/gifFinal.gif)
 
 

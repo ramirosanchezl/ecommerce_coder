@@ -50,7 +50,7 @@ const ItemDetail = ({item}) => {
                 <h3>{item.name}</h3>
                 <p className="card-description">{item.description}</p>
                 <p className="card-price">${item.price}</p>
-                <p>Stock disponible: {stock}</p>
+                <p>Stock disponible: {stock - count}</p>
                 {add ? <Link to= {'/cart'}><button className="btn-finalizar" onClick={addToCart}>Ir al carrito</button></Link> :
                     <ItemCount stock={stock}
                     initial={initial}

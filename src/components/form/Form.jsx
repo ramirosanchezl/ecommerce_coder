@@ -10,10 +10,9 @@ const Form = ({ createOrder }) => {
         name: '',
         email: '',
         phone: '',
+        emailConfirmation: '',
         msg: ''
     })
-
-    const [disableButton,setDisableButton] = useState(false)
 
 
     const getContactData = (e) => {
@@ -25,12 +24,18 @@ const Form = ({ createOrder }) => {
     }
 
     const finalizePurchase = () => {
-        if(form.name.length > 0 && form.email.length > 0 && form.phone.length > 0 ){
-            setDisableButton(true)
-            const { name, email, phone } = form
-            createOrder({ name, email, phone })
-        }
+        const { name, email, phone } = form
+        createOrder({ name, email, phone })
     }
+
+    const disabled = !(
+        form.email.length &&
+        form.name.length &&
+        form.emailConfirmation.length &&
+        form.phone.length > 0 &&
+        form.email === form.emailConfirmation
+    )
+
 
 
     return (
@@ -46,11 +51,15 @@ const Form = ({ createOrder }) => {
                     <input placeholder="Email" name="email" value={form.email} onChange={getContactData} type="email"/>
                 </div>
                 <div className="formInput">
+                <EmailIcon/>
+                    <input placeholder="Confirmar Email" name="emailConfirmation" value={form.emailConfirmation} onChange={getContactData} type="email"/>
+                </div>
+                <div className="formInput">
                     <LocalPhoneIcon/>
                     <input placeholder="Teléfono" name="phone" value={form.phone} onChange={getContactData} type="text"/>
                 </div>
             </form>
-            <button type="submit" className="finalize"  disabled={disableButton} onClick={finalizePurchase}>Finalizar</button>
+            <button type="submit" className="finalize"  disabled={disabled} onClick={finalizePurchase}>Finalizar</button>
             
         </div>
     )
